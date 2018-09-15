@@ -1,0 +1,159 @@
+%\documentclass[twocolumn,10pt]{article}
+%\usepackage{hyperref}
+
+\documentclass[applications]{gen-bioinformatics}
+
+\makeatletter
+\renewcommand\boldmath{\@nomath\boldmath\mathversioo
+n{bold}}
+\makeatother
+
+\definecolor{BiocBlue}{RGB}{24,129,194}
+\usepackage{amssymb,amsfonts,url,times}
+\usepackage[linkcolor=BiocBlue,pdfborder={0 0 0},urlcolor=BiocBlue]{hyperref}
+\usepackage{graphics}
+\usepackage{amsmath}
+\usepackage{fontawesome}
+\usepackage{dcolumn}
+\newcolumntype{.}{D{.}{.}{-1}}
+%\usepackage{hlight}
+
+\urlstyle{rm}
+\def\email#1{#1}
+
+
+
+\newcommand{\Rfunction}[1]{{\texttt{#1}}}
+\newcommand{\Robject}[1]{{\texttt{#1}}}
+\newcommand{\Rpackage}[1]{{\textit{#1}}}
+\newcommand{\BiocpackageFirst}[1]{{\emph{\href{https://bioconductor.org/packages/3.8/#1}{#1\textsubscript{\faExternalLink}}}}} 
+\newcommand{\Biocpackage}[1]{{\textit{#1}}}
+\newcommand{\CRANpackage}[1]{{\emph{\href{https://cran.r-project.org/web/packages/#1/index.html}{#1}}}}
+\newcommand{\CRANpackageFirst}[1]{{\emph{\href{https://cran.r-project.org/web/packages/#1/index.html}{#1\textsubscript{\faExternalLink}}}}}
+\newcommand{\Rmethod}[1]{{\texttt{#1}}}
+\newcommand{\Rfunarg}[1]{{\texttt{#1}}}
+\newcommand{\Rclass}[1]{{\texttt{#1}}}
+\providecommand{\OO}[1]{\operatorname{O}\left(#1\right)}
+ 
+
+\author[1]{\pfnm{Samuela}
+  \pinit{}
+  \psnm{Pollack}}
+
+\author[1]{\pfnm{Shweta}
+  \pinit{}
+  \psnm{Gopaulakrishnan}}
+
+\author[1]{\pfnm{Benjamin}
+  \pinit{}
+  \psnm{Stubbs}}
+
+\author[2]{\pfnm{Herv\'e}
+  \pinit{}
+  \psnm{Pag\`es}}
+
+\author[3]{\pfnm{John}
+  \pinit{}
+  \psnm{Readey}}
+
+\author[6]{\pfnm{Martin}
+  \pinit{T}
+  \psnm{Morgan}}
+
+\author[1]{\pfnm{Vincent}
+  \pinit{J}
+  \psnm{Carey}}
+
+\address[1]{\porgdiv{Channing Division of Network Medicine}
+  \porgname{Brigham and Women's Hospital}
+  \pstreet{181 Longwood Avenue }
+  \pcity{Boston}
+  \postcode{02115}
+  \pcnty{USA}}
+
+\address[2]{\porgdiv{Systems Bioinformatics}
+  \porgname{Fred Hutchinson Cancer Research Center}
+  \pstreet{Fairview Avenue }
+  \pcity{Seattle}
+%  \postcode{}
+  \pcnty{USA}}
+
+\address[3]{
+  \porgname{HDF Group}
+%  \pstreet{}
+  \pcity{Seattle}
+%  \postcode{}
+  \pcnty{USA}}
+
+\address[4]{\porgdiv{Center for Cancer Research}
+  \porgname{NCI}
+  \pcity{Bethesda}
+  \pcnty{USA}}
+
+
+\address[5]{
+  \porgdiv{Institute for Implementation Science in Population Health}
+  \porgname{CUNY School of Public Health}
+  \pcity{NY}
+  \pcnty{USA}}
+
+\address[6]{
+  \porgname{RPCI}
+%  \pstreet{}
+  \pcity{Buffalo}
+%  \postcode{}
+  \pcnty{USA}}
+
+ 
+
+\begin{document}
+
+
+\title{rhdf5client: Lazy interfaces to remote HDF5 with R/Bioconductor}
+\maketitle
+
+\begin{abstract}
+\begin{subabstract}[Summary]
+HDF5 is an architecture-independent software library and file format
+devised for the management of numerical arrays and relevant metadata.
+Use of HDF5 in bioinformatic applications has grown substantially,
+primarily through the production of HDF5 files of assay quantifications
+for local analysis.
+The HDF Scalable Data Service (HSDS) supports distribution
+of HDF5 file content in an object store, with data
+management and access managed through a RESTful API.
+This paper describes a new Bioconductor package that
+exposes
+bioinformatic data resources lodged in HSDS as
+DelayedArray instances.
+\end{subabstract}
+\begin{subabstract}[Availability] Package \BiocpackageFirst{rhdf5client} of Bioconductor
+ (\url {www.bioconductor.org}). Open source.
+\end{subabstract}
+\begin{subabstract}[Contact]spollack@jimmy.harvard.edu
+\end{subabstract}
+%\begin{subabstract}[keywords] REST API, HDF5, Bioconductor
+\end{abstract}
+\section*{Introduction}
+
+\cite{HDFspec}
+
+\section*{Description}
+
+\subsection*{The \texttt{SummarizedExperiment} class and related methods}
+
+\subsection*{Managing quantifications remotely}
+
+\section*{Results}
+
+\section*{Performance}
+
+\section*{Conclusions}
+
+\section*{Acknowledgments}
+Support for the development of this software was provided by NIH grants
+U01 CA214846 (Carey, PI) and U24 CA180996 (Morgan, PI).
+
+\bibliography{BioC}
+
+\end{document}
