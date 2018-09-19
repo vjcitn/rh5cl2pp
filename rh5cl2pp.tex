@@ -12,6 +12,7 @@ n{bold}}
 \usepackage{amssymb,amsfonts,url,times}
 \usepackage[linkcolor=BiocBlue,pdfborder={0 0 0},urlcolor=BiocBlue]{hyperref}
 \usepackage{graphics}
+\usepackage[strings]{underscore}
 \usepackage{amsmath}
 \usepackage{fontawesome}
 \usepackage{dcolumn}
@@ -55,6 +56,14 @@ n{bold}}
 \author[3]{\pfnm{John}
   \pinit{}
   \psnm{Readey}}
+
+\author[4]{\pfnm{Sean}
+  \pinit{}
+  \psnm{Davis}}
+
+\author[5]{\pfnm{Levi}
+  \pinit{}
+  \psnm{Waldron}}
 
 \author[6]{\pfnm{Martin}
   \pinit{T}
@@ -120,8 +129,8 @@ Use of HDF5 in bioinformatic applications has grown substantially,
 primarily through the production of HDF5 files of assay quantifications
 for local analysis.
 The HDF Scalable Data Service (HSDS) supports distribution
-of HDF5 file content in an object store, with data
-management and access managed through a RESTful API.
+of HDF5 file content in an object store.  Data
+management and access are managed through a RESTful API.
 This paper describes a new Bioconductor package that
 exposes
 bioinformatic data resources lodged in HSDS as
@@ -136,13 +145,24 @@ DelayedArray instances.
 \end{abstract}
 \section*{Introduction}
 
-\cite{HDFspec}
+
+HDF5 is an architecture-independent software library and file format
+devised for the management of numerical arrays and relevant metadata
+\citep{HDFspec}.
+Use of HDF5 in bioinformatic applications has grown substantially,
+primarily through the production of HDF5 files of assay quantifications
+for local analysis.  Examples include outputs of platforms for droplet-based
+single-cell sequencing \citep{Zheng2017} and
+nanopore sequencing \citep{NanoPage}.
+HDF5 has also been used for integrating non-omic cell- 
+and tissue-based assays \citep{Millard2011}, and images
+\citep{Dougherty2009}.  
 
 \section*{Description}
 
-\subsection*{The \texttt{SummarizedExperiment} class and related methods}
+\subsection*{The \texttt{RHDF5Source} class and related methods}
 
-\subsection*{Managing quantifications remotely}
+\subsection*{The \texttt{RHDF5Array} class and related methods}
 
 \section*{Results}
 
